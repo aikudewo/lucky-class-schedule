@@ -1,4 +1,4 @@
-const CACHE = 'lucky-schedule-v2';
+lucky-schedule-v3
 const FILES = [
   './', './index.html', './styles.css', './app.js', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png'
