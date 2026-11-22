@@ -295,9 +295,10 @@ function viewSettings(){
 }
 function render(){
   renderHero();
-  $('#view').innerHTML = state.tab === 'today' ? viewToday()
+  $('#view').innerHTML = (state.tab === 'today' ? viewToday()
     : state.tab === 'week' ? viewWeek()
-    : state.tab === 'courses' ? viewCourses() : viewSettings();
+    : state.tab === 'courses' ? viewCourses() : viewSettings())
+    + (state.tab === 'today' ? '<div class="made-by">这是钟幸运爷爷做的课表</div>' : '');
   document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === state.tab));
   window.scrollTo({top:0, behavior:'instant'});
 }
